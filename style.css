@@ -105,7 +105,10 @@ nav button {
 
 .first-section {
     padding: 15px;
+    opacity: 0;
+    animation: popup 1s ease-in-out 1 forwards;
 }
+
 .first-section .pic img {
     width: 100%;
     border-radius: 7px;
@@ -167,6 +170,7 @@ nav button {
     display: flex;
     flex-wrap: wrap;
     padding: 5px;
+    animation: popup 1s ease-in-out 1 forwards;
 }
 .second-section div {
     margin: 1%;
@@ -183,20 +187,37 @@ nav button {
 .third-section {
     padding: 15px;
     width: 100%;
+    animation: popup 1s ease-in-out 1 forwards;
 }
 .third-section .sub-divs {
-    /* display: flex; */
-    /* overflow-x: scroll; */
     margin: 20px 0px;
     gap: 2%;
 }
 .third-section .sub-divs .content {
-    display: block;
+    display: none;
     width: 80%;
     padding: 20px;
     border-radius: 5px;
     border: .1px solid #262626;
 }
+.third-section .sub-divs .content:nth-child(1) {
+    display: block;
+    opacity: 0;
+    animation: slider .5s ease-in-out 1 forwards;
+}
+@keyframes slider {
+    from {
+        opacity: 0;
+        transform: translate(100px, 0);
+        filter: blur(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
 .third-section .sub-divs .content img{
     width: 100%;
 }
@@ -251,11 +272,37 @@ nav button {
     padding: 10px;
     font-size: 10px;
 }
+.third-section .navi{
+    display: flex;
+    /* gap: 40%; */
+    width: 100%;
+}
+.navigator {
+    position: absolute;
+    display: flex;
+    right: 12%;
+    gap: 10px;
+    margin: 0;
+}
+.navigator button {
+    border: 1px solid #424242;
+    height: 40px;
+    color: white;
+    width: 40px;
+    background-color: #141414;
+    border-radius: 100%;
+}
+.navigator button:hover {
+    background-color: #262626;
+    cursor: pointer;
+
+}
 
 /* comment */
 .comments {
     display: block;
     padding: 15px;
+    animation: popup 1s ease-in-out 1 forwards;
 }
 .comments h5 {
     font-size: 20px;
@@ -303,6 +350,8 @@ nav button {
 .fourth-section {
     display: block;
     padding: 15px;
+    animation: popup 1s ease-in-out 1 forwards;
+
 }
 .fourth-section button{
     border: .1px solid rgba(255, 255, 255, 0.26);
@@ -348,6 +397,7 @@ nav button {
     display: block;
     padding: 40px 20px;
     border: 1px solid #262626;
+    animation: popup 1s ease-in-out 1 forwards;
 }
 .conclusion .text .txt2 {
     margin-top: 15px;
@@ -368,6 +418,7 @@ nav button {
 .footer {
     display: block;
     padding: 20px;
+    animation: popup 1s ease-in-out 1 forwards;
 }
 .info {
     width: 100%;
@@ -403,11 +454,23 @@ nav button {
     background-color: #262626;
     text-align: center;
     line-height: 30px;
+    animation: popup 1s ease-in-out 1 forwards;
 }
 .end-line a, p {
     font-size: 14px;
 }
-
+@keyframes popup {
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0px);
+    }
+}
 
 
 @media only screen and (min-width: 415px) {
