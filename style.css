@@ -543,7 +543,7 @@ nav button:hover {
 }
 .fourth-section .sub-divs .content {
     display: none;
-    height: 130px;
+    height: 150px;
     width: 90%;
     padding: 20px;
     border-radius: 5px;
@@ -985,7 +985,7 @@ nav button:hover {
     .fourth-section .sub-divs .content {
         display: block;
         width: 29%;
-        height: 30vh;
+        height: 150px;
         padding: 30px;
         border-radius: 5px;
         border: .1px solid #262626;
