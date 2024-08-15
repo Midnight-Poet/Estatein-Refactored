@@ -101,7 +101,7 @@ nav {
     /* opacity: 0; */
     display: flex;
     flex-direction: column;
-    background-color: #1414148f;
+    background-color: #141414b6;
     backdrop-filter: blur(20px);
     box-shadow: 0 0 100px 400px #42424250;
     height: 100vh;
@@ -139,7 +139,7 @@ nav ul li {
     font-size: 14px;
 }
 nav ul li:hover {
-    background-color: #141414;
+    background-color: #000000c6;
     cursor: pointer;
 }
 nav button {
