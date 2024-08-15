@@ -18,8 +18,8 @@
 body {
     background-color: #141414;
     color: whitesmoke;
-    width: 412px;
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 p {
@@ -29,26 +29,27 @@ p {
 h1 {
     font-size: 28px;
 }
+a {
+    color: white;
+}
 h3 {
     font-size: 28px;
     line-height: 40px;
 }
-/* .txt button{
-    border: .1px solid rgba(255, 255, 255, 0.26);
-    background-color: #262626;
-    color: white;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 10px;
-} */
+h5 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+}
 /* .absolute {
     width: 1px;
     height: 120cm;
     z-index: 2000;
     position: fixed;
     background-color: white;
-    margin-left: 94%;
-    margin-top: -10%;
+    left: 96%;
+    top: -10%;
 } */
 
 .first-header {
@@ -58,47 +59,97 @@ h3 {
 }
 .navbar {
     display: flex;
-    gap: 60%;
-    padding: 15px;
+    justify-content: space-between;
+    padding: 2%;
     border: 1px solid #424242;
 }
 .menu {
     display: block;
-    width: 28px
+    width: max-content;
+    height: fit-content;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 .menu div {
     width: 25px;
     height: 4px;
     border-radius: 20px;
     background-color: #fff;
-    margin-left: 70px;
-    margin-top: 4px;
+    margin-top: 5px;
 }
+
 nav {
     display:none;
-    position: absolute;
-    left: 75%;
-    top: 8%;
+
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 40%;
+    animation: popout 1s ease-in-out forwards;
+    /* Extra cutout */
+    
+}
+.navget {
+    animation: pop .5s ease-in-out forwards;
+    /* opacity: 0; */
+    display: flex;
+    flex-direction: column;
+    background-color: #1414148f;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 100px 400px #42424250;
+    height: 100vh;
     z-index: 5;
 }
+@keyframes pop {
+    from {
+        opacity: 0;
+        filter: blur(30px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+nav button:first-child {
+    width: 30px;
+    position: absolute;
+    border: none;
+    color: #fff;
+    right: 5%;
+    top: 0;
+}
+
 nav ul {
+    display: flex;
+    flex-direction: column;
     list-style-type: none;
-    margin-top: 10px;
+    margin-top: 25%;
+    text-align: center;
 }
 nav ul li {
-    line-height: 30px;
-    text-align: center;
+    line-height: 50px;
     font-size: 14px;
 }
+nav ul li:hover {
+    background-color: #141414;
+    cursor: pointer;
+}
 nav button {
-    padding: 10px 9px;
-    width: fit-content;
-    border: 1px solid rgba(255, 255, 255, 0.26);
+    padding: 12px 10px;
+    border: 1px solid #424242;
     background-color: #141414;
     color: white;
-    border-radius: 5px;
+    border-radius: 4px;
+    margin-top: 10px;
+    width: 90%;
     font-size: 10px;
     cursor: pointer;
+    align-self: center;
+}
+nav button:hover {
+    background-color: #424242ab;
 }
 
 /* first Section  */
@@ -136,66 +187,132 @@ nav button {
     padding: 10px;
     font-size: 14px;
 }
-.first-section .sub-divs {
+.first-section .txt1 .buttons button:nth-child(1):hover {
+    background-color: #1414148d;
+    cursor: pointer;
+}
+.first-section .txt1 .buttons button:nth-child(2):hover {
+    background-color: #703bf7a4;
+    cursor: pointer;
+}
+.first-section .sub-div {
     display: flex;
     flex-wrap: wrap;
     gap: 3%;
 }
-.first-section .sub-divs div{
+.first-section .sub-div div{
     display: block;
     height: 70px;
-    width: 40%;
-    padding: 15px;
-    align-content: center;
+    width: 44%;
+    padding: 2%;
     text-align: center;
     border-radius: 10px;    
-    border: .1px solid rgba(255, 255, 255, 0.26);
+    border: 1px solid rgba(255, 255, 255, 0.26);
     background-color: #262626;
 }
-.first-section .sub-divs div:nth-child(3) {
+.first-section .sub-div div:nth-child(3) {
     width: 100%;
     margin-top: 3%;
 }
-.first-section .sub-divs div h4 {
+.first-section .sub-div div h4 {
     font-size: 24px;
     line-height: 40px;
 }
 /* Second Section */
 
 .second-section{
-    margin: 12px;
-    width: 90%;
+    margin: 1.5%;
     border: 1px solid #262626;
     border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     padding: 5px;
     animation: popup 1s ease-in-out 1 forwards;
 }
-.second-section div {
+.second-section .whole {
     margin: 1%;
-    width: 37%;
-    align-content: center;
+    width: 41%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: #262626;
-    padding: 20px;
+    padding: 2%;
     text-align: center;
     border-radius: 5px;
     font-size: 20px;
 } 
+.second-section .whole p {
+    margin-top: -15px;
+    align-self: self-end;
+    font-size: 30px;
+    color: #A685FA;
+}
+.second-section .whole .home {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border-radius: 100%;
+    color: #A685FA;
+}
+.home::before {
+    position: absolute;
+    border: 1px solid;
+    border-color: #A685FA transparent;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    left: 34%;
+    bottom: 8%;
+    content: '';
+    animation: rotate 8s linear infinite ;
+}
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.home::after {
+    position: absolute;
+    border: 1px solid purple;
+    border-color: #A685FA transparent;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    left: 37%;
+    bottom: 21%;
+    content: '';
+    animation: rotate-rev 8s linear infinite ;
+}
+@keyframes rotate-rev {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+
+
 
 /* Third Section */
 .third-section {
-    padding: 15px;
-    width: 100%;
+    padding: 2%;
+    margin: 20px 0;
     animation: popup 1s ease-in-out 1 forwards;
+}
+.third-section #thrdsec-btn:hover {
+    background-color: #141414;
+    cursor: pointer;
 }
 .third-section .sub-divs {
     margin: 20px 0px;
     gap: 2%;
 }
 .third-section .sub-divs .content {
+    height: max-content;
     display: none;
-    width: 80%;
+    width: 90%;
     padding: 20px;
     border-radius: 5px;
     border: .1px solid #262626;
@@ -205,18 +322,7 @@ nav button {
     opacity: 0;
     animation: slider .5s ease-in-out 1 forwards;
 }
-@keyframes slider {
-    from {
-        opacity: 0;
-        transform: translate(100px, 0);
-        filter: blur(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translate(0);
-        filter: blur(0);
-    }
-}
+
 
 .third-section .sub-divs .content img{
     width: 100%;
@@ -244,8 +350,8 @@ nav button {
 }
 .third-section .sub-divs .content .price {
     display: flex;
+    justify-content: space-between;
     margin-top: 20px;
-    gap: 35%;
 }
 .third-section .sub-divs .content .price p {
     font-size: 14px;
@@ -261,6 +367,10 @@ nav button {
     padding: 10px;
     font-size: 10px;
 }
+.third-section .sub-divs .content .price button:hover {
+    background-color: #703bf7a4;
+    cursor: pointer;
+}
 .third-section #thrdsec-btn:nth-child(2) {
     display: none;
 }
@@ -272,17 +382,21 @@ nav button {
     padding: 10px;
     font-size: 10px;
 }
-.third-section .navi{
+
+.navi{
     display: flex;
-    /* gap: 40%; */
     width: 100%;
+    padding: 20px 0;
+    border: 1px solid #424242;
+    border-color: #424242 transparent transparent transparent;
+    justify-content: space-between;
 }
 .navigator {
-    position: absolute;
     display: flex;
-    right: 12%;
     gap: 10px;
-    margin: 0;
+}
+.navigator p{
+    margin-top: 10px;
 }
 .navigator button {
     border: 1px solid #424242;
@@ -297,12 +411,33 @@ nav button {
     cursor: pointer;
 
 }
+.ps {
+    display: none;
+}
 
 /* comment */
 .comments {
     display: block;
-    padding: 15px;
+    padding: 3%;
+    margin: 20px 0;
     animation: popup 1s ease-in-out 1 forwards;
+}
+.comments .rating {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.comments .rating p {
+    padding: 2px;
+    font-size: 18px;
+    color: #FFE500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+    border: 1px solid;
+    border-color: #4242428f;
+    border-radius: 100%;
 }
 .comments h5 {
     font-size: 20px;
@@ -319,23 +454,29 @@ nav button {
 .comments .text .txt {
     margin-top: 15px;
     display: block;
+    text-align: justify;
 }
-.comments .sub-div {
-    margin-top: 15px;
-    gap: 3.8%;
-}
-.comments .sub-div .content {
-    display: block;
-    width: 85%;
+.comments .sub-divs {
     margin: 20px 0px;
-    padding: 30px;
+    gap: 2%;
+}
+.comments .sub-divs .content {
+    height: max-content;
+    display: none;
+    width: 90%;
+    padding: 20px;
     border-radius: 5px;
     border: 1px solid #262626;
+}
+.comments .sub-divs .content:nth-child(1) {
+    display: block;
+    opacity: 0;
+    animation: slider .5s ease-in 1 forwards;
 }
 .comments #comment-btn:nth-child(2) {
     display: none;
 }
-.comments #comment-btn:nth-child(1) {
+.comments #comment-btn {
     border: .1px solid rgba(255, 255, 255, 0.26);
     display: block;
     background-color: #262626;
@@ -343,17 +484,22 @@ nav button {
     border-radius: 5px;
     padding: 10px;
     font-size: 10px;
+}
+.comments #comment-btn:hover {
+    background-color: #141414;
+    cursor: pointer;
 }
 
 /* Fourth Section */
 
 .fourth-section {
     display: block;
+    margin: 20px 0;
     padding: 15px;
     animation: popup 1s ease-in-out 1 forwards;
 
 }
-.fourth-section button{
+.fourth-section #more{
     border: .1px solid rgba(255, 255, 255, 0.26);
     background-color: #262626;
     color: white;
@@ -361,10 +507,14 @@ nav button {
     padding: 10px;
     font-size: 10px;
 }
+.fourth-section #more:hover {
+    background-color: #141414;
+    cursor: pointer;
+}
 .fourth-section #faq:nth-child(2) {
     display: none;
 }
-.fourth-section #faq:nth-child(1) {
+.fourth-section #faq {
     border: .1px solid rgba(255, 255, 255, 0.26);
     display: block;
     background-color: #262626;
@@ -372,20 +522,31 @@ nav button {
     border-radius: 5px;
     padding: 10px;
     font-size: 10px;
+    position: relative;
+}
+.fourth-section #faq:hover {
+    background-color: #141414;
+    cursor: pointer;
 }
 .fourth-section .text .txt {
     margin-top: 15px;
 }
 .fourth-section .sub-divs {
-    margin-top: 15px;
+    margin: 20px 0;
+    gap: 2%;
 }
 .fourth-section .sub-divs .content {
-    display: block;
-    width: 80%;
-    margin: 20px 0px;
-    padding: 30px;
+    display: none;
+    height: 130px;
+    width: 90%;
+    padding: 20px;
     border-radius: 5px;
-    border: .1px solid #262626;
+    border: 1px solid #262626;
+}
+.fourth-section .sub-divs .content:nth-child(1) {
+    display: block;
+    opacity: 0;
+    animation: slider .5s ease-in 1 forwards;
 }
 .fourth-section .sub-divs p {
     padding: 15px 5px;
@@ -395,6 +556,7 @@ nav button {
 
 .conclusion {
     display: block;
+    margin-top: 10%;
     padding: 40px 20px;
     border: 1px solid #262626;
     animation: popup 1s ease-in-out 1 forwards;
@@ -411,6 +573,10 @@ nav button {
     font-size: 14px;
     width: 100%;
     margin-top: 5%;
+}
+.conclusion .text .txt2 button:hover {
+    background-color: #703bf7a4;
+    cursor: pointer;
 }
 
 /* Footer */
@@ -471,9 +637,19 @@ nav button {
         filter: blur(0px);
     }
 }
-
-
-@media only screen and (min-width: 415px) {
+@keyframes slider {
+    from {
+        opacity: 0;
+        transform: translate(100px, 0);
+        filter: blur(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+@media only screen and (min-width: 645px) {
     body {
         width: 100%;
     }
@@ -485,8 +661,7 @@ nav button {
     }
     .navbar {
         background-color: #262626;
-        padding: 10px 20px;
-        gap: 25%;
+        padding: 5px 50px;
         align-content: center;
     }
     .menu {
@@ -494,24 +669,23 @@ nav button {
     }
     nav {
         position: relative;
+        background-color: #00000000;
         width: 100%;
         display: flex;
-        left: 0;
-        top: 0;
-        z-index: 0;
-        margin-left: 5%;
+        height: fit-content;
         font-size: 14px;
     }
     nav ul {
         margin: 0;
+        width: 100%;
         display: flex;
+        flex-direction: row;
+        justify-content: center;
         list-style-type: none;
     }
     nav ul li {
-        align-self: center;
-        margin-left: 10px;
-        padding: 5px 10px;
-        /* line-height: 10px; */
+        /* margin-left: 10px; */
+        padding: 0px 10px;
         border-radius: 5px;
         cursor: pointer;
     }
@@ -519,15 +693,20 @@ nav button {
         background-color: #141414;
     }
     nav button {
-        padding: 15px 15px;
+        padding: 1%;
         border: .1px solid rgba(255, 255, 255, 0.26);
         background-color: #141414;
         color: white;
         border-radius: 5px;
         height: fit-content;
+        width: 100px;
         font-size: 10px;
-        margin-left: 50%;
+        justify-self: flex-end;
+        margin-top: 0;
         cursor: pointer;
+    }
+    nav button:first-child {
+        display: none;
     }
     
     /* First Section */
@@ -548,7 +727,7 @@ nav button {
         display: block;
     }
     .first-section .txt1 h1 {
-        font-size: 35px;
+        font-size: 180%;
     
     }
     .first-section .txt1 p {
@@ -559,14 +738,13 @@ nav button {
         gap: 10px;
     }
     .first-section .txt1 .buttons button {
-        width: 20%;
+        width: 25%;
     }
     .first-section .txt1 .buttons button:nth-child(1) {
         border: .1px solid rgba(255, 255, 255, 0.26);
         background-color: #262626;
         color: white;
         border-radius: 5px;
-        padding: 10px;
         font-size: 10px;
     }
     .first-section .txt1 .buttons button:nth-child(2) {
@@ -574,26 +752,31 @@ nav button {
         border: none;
         color: white;
         border-radius: 5px;
-        /* width: 111px; */
-        padding: 10px;
+        padding: 2%;
         font-size: 10px;
     }
-    .first-section .txt1 .sub-divs {
+    .first-section .txt1 .sub-div {
         display: flex;
         margin-top: 5%;
-        gap: 10px;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
     }
-    .first-section .txt1 .sub-divs .sdiv {
-        display: block;
-        height: 70px;
+    .first-section .txt1 .sub-div .sdiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
         width: 26%;
-        align-content: center;
+        height: 90px;
+        text-align: left;
         border-radius: 5px;    
         border: .1px solid rgba(255, 255, 255, 0.26);
         background-color: #262626;
     
     }
-    .first-section .sub-divs div:nth-child(3) {
+    .first-section .sub-div div:nth-child(3) {
         margin-top: 0;
     }
     .first-section .txt1 .sub-divs .sdiv h4{
@@ -613,43 +796,70 @@ nav button {
     .second-section{
         border: 6px solid #262626;
         display: flex;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        align-items: center;
         margin: 0;
-        width :98.5%;
+        width : 97.5%;
         gap: 5px;
         margin-top: -8px;
     }
-    .second-section div {
+    .second-section .whole {
+        align-items: center;
+        justify-content: center;
         margin: 0;
-        width: 21.4%;
+        width: 20.6%;
+        height: 80px;
+        padding: 2%;
         background-color: #262626;
         text-align: center;
         border-radius: 5px;
         font-size: 20px;
     }
-    
-    
+    .second-section .whole p {
+        margin-top: -30px;
+        font-size: 40px;
+    }
+    .second-section .whole .home::before {
+        left: 40%;
+    }
+    .second-section .whole .home::after {
+        left: 42%;
+    }
+        /* Navigator */
+    .navi {
+        margin: 0;
+        /* display: none; */
+    }
+    .navigator p {
+        display: none;
+    }
+    .navigator {
+        right: 16.6%;
+    }
+    .ps {
+        display: flex;
+        gap: 10px;
+    }
     /* Third Section */
     .third-section { 
         display: block;
         padding: 50px;
+        margin: 0;
     }
     .third-section .text .txt {
         margin-top: 15px;
         display: flex;
-        gap: 21.6%;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
     .third-section #thrdsec-btn:nth-child(1) {
         display: none;
     }
     .third-section #thrdsec-btn:nth-child(2) {
-        border: .1px solid rgba(255, 255, 255, 0.26);
         display: block;
-        background-color: #262626;
-        color: white;
-        border-radius: 5px;
-        padding: 10px;
-        font-size: 10px;
     }
+
     .third-section .sub-divs {
         display: flex;
         margin-top: 15px;
@@ -657,8 +867,8 @@ nav button {
     }
     .third-section .sub-divs .content {
         display: block;
-        width: 24%;
-        padding: 30px;
+        width: 30%;
+        padding: 2%;
         border-radius: 5px;
         border: .1px solid #262626;
     }
@@ -678,7 +888,8 @@ nav button {
     .third-section .sub-divs .content .minor-div {
         display: flex;
         margin-top: 15px;
-        gap: 10px;
+        gap: 5px;
+        flex-wrap: wrap;
     }
     .third-section .sub-divs .content .minor-div p{
         border: .1px solid #262626;
@@ -688,7 +899,8 @@ nav button {
     .third-section .sub-divs .content .price {
         display: flex;
         margin-top: 20px;
-        gap: 35%;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
     .third-section .sub-divs .content .price p {
         font-size: 14px;
@@ -703,6 +915,7 @@ nav button {
     .comments {
         display: block;
         padding: 50px;
+        margin-top: -5%;
     }
     .comments h5 {
         font-size: 20px;
@@ -716,28 +929,24 @@ nav button {
     .comments .text .txt {
         margin-top: 15px;
         display: flex;
-        gap: 23%;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
     .comments #comment-btn:nth-child(1) {
         display: none;
     }
     .comments #comment-btn:nth-child(2) {
-        border: .1px solid rgba(255, 255, 255, 0.26);
         display: block;
-        background-color: #262626;
-        color: white;
-        border-radius: 5px;
-        padding: 10px;
-        font-size: 10px;
     }
-    .comments .sub-div {
+    .comments .sub-divs {
         display: flex;
         margin-top: 15px;
-        gap: 3.8%;
+        justify-content: space-between;
     }
-    .comments .sub-div .content {
+    .comments .sub-divs .content {
         display: block;
-        width: 25%;
+        width: 24%;
+        height: max-content;
         padding: 30px;
         border-radius: 5px;
         border: .1px solid #262626;
@@ -747,33 +956,29 @@ nav button {
     .fourth-section {
         display: block;
         padding: 50px;
+        margin-top: -5%;
     }
     .fourth-section .text .txt {
         margin-top: 15px;
         display: flex;
-        gap: 24.7%;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
     .fourth-section #faq:nth-child(1) {
         display: none;
     }
     .fourth-section #faq:nth-child(2) {
-        border: .1px solid rgba(255, 255, 255, 0.26);
         display: block;
-        background-color: #262626;
-        color: white;
-        border-radius: 5px;
-        padding: 10px;
-        font-size: 10px;
     }
     
     .fourth-section .sub-divs {
         display: flex;
         margin-top: 15px;
-        gap: 3.4%;
+        gap: 2%;
     }
     .fourth-section .sub-divs .content {
         display: block;
-        width: 27%;
+        width: 29%;
         padding: 30px;
         border-radius: 5px;
         border: .1px solid #262626;
@@ -787,11 +992,12 @@ nav button {
         display: block;
         padding: 50px;
         border: 1px solid #262626;
+        margin-top: -5%;
     }
     .conclusion .text .txt2 {
         margin-top: 15px;
         display: flex;
-        gap: 28.5%;
+        justify-content: space-between;
     }
     .conclusion .text .txt2 button{
         background-color: #703BF7;
@@ -809,20 +1015,19 @@ nav button {
     .footer {
         display: flex;
         padding: 50px;
-        gap: 5%;
+        justify-content: space-between;
         margin: 0;
-    }
-    .footer .logo {
-        margin-right: 5%;
     }
     .footer .info {
         flex-wrap: nowrap;
         margin: 0;
+        justify-content: space-between;
+        width: 65%;
     }
     .footer .info div {
         border: none;
         margin: 0;
-        width: 25%;
+        width: max-content;
     }
     .footer div a {
         line-height: 26px;

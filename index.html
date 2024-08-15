@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" 
+    integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
-    <script src="https://kit.fontawesome.com/3537296bc6.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
     <header class="first-header">
@@ -13,16 +20,17 @@
     </header>
     <div class="navbar">
         <h5>
-            <img src="" alt="">
+            <img src="./resources/logo.png" alt="">
             Estatein
         </h5>
-        <div class="menu">
+        <button class="menu">
             <div></div>
             <div></div>
             <div></div>
-        </div>
-        <nav>
-            
+        </button>
+        <nav class="nav">
+            <!-- <div class="navget"></div> -->
+            <button class="close">&#9587</button>
             <ul>
                 <li>Home</li>
                 <li>About Us</li>
@@ -58,7 +66,7 @@
                     <button id="browse">Browse Properties</button>
                 </div>
                 <br><br>
-                <div class="sub-divs">
+                <div class="sub-div">
                     <div class="sdiv">
                         <h4>200+</h4>
                         <p>Happy Customers</p>
@@ -79,20 +87,32 @@
     </div>
 
     <div class="second-section">
-        <div>
-            <i></i>
+        <div class="whole">
+            <p>&#8599</p>
+            <div class="home">
+                <i class="fa-solid fa-house"></i>
+            </div>
             <h6>Find Your Dream Home</h6>
         </div>
-        <div>
-            <i></i>
+        <div class="whole">
+            <p>&#8599</p>
+            <div class="home">
+                <i class="fa-solid fa-radio"></i>
+            </div>
             <h6>Unlock property Value</h6>
         </div>
-        <div>
-            <i></i>
+        <div class="whole">
+            <p>&#8599</p>
+            <div class="home">
+                <i class="fa-solid fa-hotel"></i>
+            </div>
             <h6>Effortless Property Management</h6>
         </div>
-        <div>
-            <i></i>
+        <div class="whole">
+            <p>&#8599</p>
+            <div class="home">
+                <i class="fa-solid fa-sun"></i>
+            </div>
             <h6>Smart Investments, Informed Decisions</h6>
         </div>
     </div>
@@ -111,6 +131,7 @@
             </div>
         </div>
         <div class="sub-divs" id="slide">
+            
             <div class="content">
                 <img src="./resources/img2.png" alt="">
                 <div class="content-txt">
@@ -190,14 +211,23 @@
             <button id="thrdsec-btn">View All Properties</button>
             <div class="navigator">
                 <button id="prev">&#10094;</button>
-                <p id="id"></p>
-                <p>Of</p>
-                <p id="total"></p>
+                <p id="counter" class="test"></p>
+                <p class="test">Of</p>
+                <p id="total" class="test"></p>
                 <button id="next">&#10095;</button>
             </div>
-            <div id="prevs"></div>
+            <div class="ps">
+                <p class="counter"></p>
+                <p class="test">Of</p>
+                <p class="total"></p>
+            </div>
         </div>
+        <!-- border: 1px solid;
 
+        border-image-source: linear-gradient(40.65deg, #A685FA 0.85%, rgba(166, 133, 250, 0) 34.8%),
+        linear-gradient(219.04deg, #A685FA -6.93%, rgba(166, 133, 250, 0) 52.6%); -->
+        
+        
     </div>
 
     <div class="comments">
@@ -214,9 +244,16 @@
                 <button id="comment-btn">View All Testimonials</button>
             </div>
         </div>  
-        <div class="sub-div">
+        <div class="sub-divs subdiv1" id="slide">
             <div class="content">
-                <i></i>
+                <div class="rating">
+                    <p>&#9733</p>
+                    <p>&#9733</p>
+                    <p>&#9733</p>
+                    <p>&#9733</p>
+                    <p>&#9733</p>
+
+                </div>
                 <h5>
                     Exceptional service!
                 </h5>
@@ -235,7 +272,14 @@
                 </div>
             </div>
             <div class="content">
-                <i></i>
+                <div class="rating">
+                    <p>&#9733</p>
+                    <p>&#9733</p>
+                    <p>&#9733</p>
+                    <p>&#9733</p>
+                    <p>&#9733</p>
+
+                </div>
                 <h5>
                     Exceptional service!
                 </h5>
@@ -254,7 +298,14 @@
                 </div>
             </div>
             <div class="content">
-                <i></i>
+                <div class="rating">
+                    <p>&#9733</p>
+                    <p>&#9733</p>
+                    <p>&#9733</p>
+                    <p>&#9733</p>
+                    <p>&#9733</p>
+
+                </div>
                 <h5>
                     Exceptional service!
                 </h5>
@@ -273,9 +324,19 @@
                 </div>
             </div>
         </div>
-        <div>
+        <div class="navi">
             <button id="comment-btn">View All Testimonials</button>
             <div class="navigator">
+                <button id="prev">&#10094;</button>
+                <p id="counter"></p>
+                <p>Of</p>
+                <p id="total"></p>
+                <button id="next">&#10095;</button>
+            </div>
+            <div class="ps">
+                <p class="counter"></p>
+                <p class="test">Of</p>
+                <p class="total"></p>
             </div>
         </div>
     </div>
@@ -359,10 +420,22 @@
                 <button id="more">Read More</button>
             </div> -->
         </div>
-            <div class="scrol">
-                <button id="faq">View All FAQ's</button>
-                <div class="navigation"></div>
+        <div class="navi">
+            <button id="faq">View All FAQ's</button>
+            <div class="navigator">
+                <button id="prev">&#10094;</button>
+                <p id="counter"></p>
+                <p>Of</p>
+                <p id="total"></p>
+                <button id="next">&#10095;</button>
             </div>
+            <div class="ps">
+                <p class="counter"></p>
+                <p class="test">Of</p>
+                <p class="total"></p>
+            </div>
+
+        </div>
     </div>
 
     <div class="conclusion">
@@ -388,14 +461,13 @@
     <footer>
         <div class="footer">
             <div class="contact">
-                <div class="logo">
                     <h5>
-                        <img src="" alt="">
+                        <img src="./resources/logo.png" alt="">
                         Estatein
                     </h5>
                     <br>
                     <input type="email" placeholder="Enter Your Email" id="">
-                </div>
+
             </div>
             <div class="info">
                 <div>
