@@ -139,7 +139,7 @@ nav ul li {
     font-size: 14px;
 }
 nav ul li:hover {
-    background-color: #000000c6;
+    background-color: #000000;
     cursor: pointer;
 }
 nav button {
