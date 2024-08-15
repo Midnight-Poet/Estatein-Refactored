@@ -64,7 +64,8 @@ h5 {
     border: 1px solid #424242;
 }
 .menu {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: max-content;
     height: fit-content;
     background: none;
@@ -77,6 +78,10 @@ h5 {
     border-radius: 20px;
     background-color: #fff;
     margin-top: 5px;
+}
+.menu div:nth-child(3) {
+    width: 15px;
+    align-self: self-end;
 }
 
 nav {
