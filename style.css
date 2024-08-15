@@ -985,6 +985,7 @@ nav button:hover {
     .fourth-section .sub-divs .content {
         display: block;
         width: 29%;
+        height: 30vh;
         padding: 30px;
         border-radius: 5px;
         border: .1px solid #262626;
