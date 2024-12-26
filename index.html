@@ -4,15 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" 
-    integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+    <!-- Google Fonts -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
     <link rel="icon" href="./resources/logo.png">
     <link rel="stylesheet" href="style.css">
     <title>Estatein</title>
@@ -20,104 +16,110 @@
 </head>
 <body>
     <header class="first-header">
-        Discover Your Dream Property With Estatein <a href="">Learn More</a>
+        Discover Your Dream Property With Estatein <a href="#">Learn More</a>
     </header>
     <div class="navbar">
         <h5>
             <img src="./resources/logo.png" alt="">
             Estatein
         </h5>
-        <button class="menu">
+        <button class="menu-btn">
             <div></div>
             <div></div>
             <div></div>
         </button>
         <nav class="nav">
-            <!-- <div class="navget"></div> -->
-            <button class="close">&#9587</button>
             <ul>
                 <li>Home</li>
                 <li>About Us</li>
                 <li>Properties</li>
                 <li>Services</li>
-                
+                <button class="contact-btn dark-btn">
+                    Contact Us
+                </button>
             </ul>
-            <button id="end">
-                Contact Us
-            </button>
         </nav>
-        
+        <button class="contact-btn dark-btn">
+            Contact Us
+        </button>
+        <nav class="res-nav">
+            <button class="close-btn dark-btn">&#9587</button>
+            <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Properties</li>
+                <li>Services</li>
+                <button class="contact-btn dark-btn">
+                    Contact Us
+                </button>
+            </ul>
+        </nav>
     </div>
     <div class="absolute"></div>
 
     <div class="first-section">
+        <div class="pic">
+            <img src="./resources/img1.png" alt="" class="img1">
+        </div>
         <div class="text">
-            <div class="pic">
-                <img src="./resources/img1.png" alt="">
-            </div>
-            <div class="txt1">
-                <h1>
-                    Discover Your Dream <br> Property With Estatein
+            <div class="txt txt1">
+                <h1 class="header1">
+                    Discover Your Dream Property With Estatein
                 </h1>
-                <br>
                 <p>
-                    Your journey to finding the perfect property begins here. Explore our listings to find the <br>
+                    Your journey to finding the perfect property begins here. Explore our listings to find the
                     home that matches your dreams.
                 </p>
-                <br>
                 <div class="buttons">
-                    <button id="learn-more">Learn More</button>
-                    <button id="browse">Browse Properties</button>
-                </div>
-                <br><br>
-                <div class="sub-div">
-                    <div class="sdiv">
-                        <h4>200+</h4>
-                        <p>Happy Customers</p>
-                    </div>
-                    <div class="sdiv">
-                        <h4>10k+</h4>
-                        <p>Properties For Clients</p>
-                    </div>
-                    <div class="sdiv">
-                        <h4>16+</h4>
-                        <p>Years Of Experience</p>
-                    </div>
+                    <button class="learn-more dark-btn">Learn More</button>
+                    <button class="browse blue-btn">Browse Properties</button>
                 </div>
             </div>
-            
+            <div class="sub-div">
+                <div class="sdiv">
+                    <h4>200+</h4>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="sdiv">
+                    <h4>10k+</h4>
+                    <p>Properties For Clients</p>
+                </div>
+                <div class="sdiv">
+                    <h4>16+</h4>
+                    <p>Years Of Experience</p>
+                </div>
+            </div>
         </div>
-
     </div>
 
     <div class="second-section">
-        <div class="whole">
+        <div class="sub-div div-col-1">
             <p>&#8599</p>
             <div class="home">
                 <i class="fa-solid fa-house"></i>
             </div>
-            <h6>Find Your Dream Home</h6>
+            <h5>Find Your Dream Home</h5>
         </div>
-        <div class="whole">
+        <div class="sub-div div-col-1">
             <p>&#8599</p>
             <div class="home">
                 <i class="fa-solid fa-radio"></i>
             </div>
-            <h6>Unlock property Value</h6>
+            <h5>Unlock property Value</h5>
         </div>
-        <div class="whole">
+        <div class="sub-div div-col-1">
             <p>&#8599</p>
             <div class="home">
                 <i class="fa-solid fa-hotel"></i>
             </div>
-            <h6>Effortless Property Management</h6>
+            <h5>Effortless Property Management</h5>
         </div>
-        <div class="whole">
+        <div class="sub-div div-col-1">
             <p>&#8599</p>
             <div class="home">
                 <i class="fa-solid fa-sun"></i>
             </div>
-            <h6>Smart Investments, Informed Decisions</h6>
+            <h5>Smart Investments, Informed Decisions</h5>
         </div>
     </div>
 
@@ -129,21 +131,21 @@
             <div class="txt">
                 <p>
                     Explore our handpicked selection of featured properties. 
-                    Each listing offers a glimpse into exceptional homes and investments available <br> through Estatein. Click "View Details" for more information.
+                    Each listing offers a glimpse into exceptional homes and investments available 
+                    through Estatein. Click "View Details" for more information.
                 </p>
-                <button id="thrdsec-btn">View All Properties</button>
+                <button id="thrdsec-btn" class="dark-btn">View All Properties</button>
             </div>
         </div>
         <div class="sub-divs" id="slide">
-            
-            <div class="content">
+            <div class="content slide1 ">
                 <img src="./resources/img2.png" alt="">
                 <div class="content-txt">
                     <h5>
                         Seaside Serenity Villa
                     </h5>
                     <p>
-                        A stunning 4-bedroom, 3-bathroom villa in a <br>
+                        A stunning 4-bedroom, 3-bathroom villa in a
                         peaceful suburban neighborhood... <b>Read More</b>
                     </p>
                 </div>
@@ -153,22 +155,19 @@
                     <p>Villa</p>
                 </div>
                 <div class="price">
-                    <div>
-                        <p>Price</p>
-                        <h6>$550,000</h6>
-                    </div>
-                    <button id="view-details">View Property Details</button>
-
+                    <p>Price</p>
+                    <h6>$550,000</h6>
+                    <button id="view-details" class="blue-btn">View Property Details</button>
                 </div>
             </div>
-            <div class="content">
+            <div class="content slide1 ">
                 <img src="./resources/img3.png" alt="">
                 <div class="content-txt">
                     <h5>
                         Seaside Serenity Villa
                     </h5>
                     <p>
-                        A stunning 4-bedroom, 3-bathroom villa in a <br>
+                        A stunning 4-bedroom, 3-bathroom villa in a 
                         peaceful suburban neighborhood... <b>Read More</b>
                     </p>
                 </div>
@@ -178,22 +177,19 @@
                     <p>Villa</p>
                 </div>
                 <div class="price">
-                    <div>
-                        <p>Price</p>
-                        <h6>$550,000</h6>
-                    </div>
-                    <button id="view-details">View Property Details</button>
-                    
+                    <p>Price</p>
+                    <h6>$550,000</h6>
+                    <button id="view-details" class="blue-btn">View Property Details</button>
                 </div>
             </div>
-            <div class="content">
+            <div class="content slide1 ">
                 <img src="./resources/img4.png" alt="">
                 <div class="content-txt">
                     <h5>
                         Seaside Serenity Villa
                     </h5>
                     <p>
-                        A stunning 4-bedroom, 3-bathroom villa in a <br>
+                        A stunning 4-bedroom, 3-bathroom villa in a 
                         peaceful suburban neighborhood... <b>Read More</b>
                     </p>
                 </div>
@@ -203,16 +199,15 @@
                     <p>Villa</p>
                 </div>
                 <div class="price">
-                    <div>
-                        <p>Price</p>
-                        <h6>$550,000</h6>
-                    </div>
-                    <button id="view-details">View Property Details</button>
+                    <p>Price</p>
+                    <h6>$550,000</h6>
+                    <button id="view-details" class="blue-btn">View Property Details</button>
                 </div>
             </div>
         </div>
+        <hr>
         <div class="navi">
-            <button id="thrdsec-btn">View All Properties</button>
+            <button id="thrdsec-btn" class="dark-btn">View All Properties</button>
             <div class="navigator">
                 <button id="prev">&#10094;</button>
                 <p id="counter" class="test"></p>
@@ -534,6 +529,8 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
