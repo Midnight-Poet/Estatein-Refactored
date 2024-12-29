@@ -84,15 +84,36 @@ gsap.from('.div-col-1', {
 })
 
 let content = document.querySelectorAll('.slide1')
+// let arr = []
+// let txt = document.querySelector('h1').innerText.split('')
+// for (let i = 0; i < txt.length; i++) {
+//     arr.push(txt[i])
+    
+// }
+// arr.forEach(element => {
+//     let tt = document.createElement('span')
+//     tt.innerText = element
+//     gsap.from(tt, {
+//         scrollTrigger: '.first-section',
+//         marginLeft: '-200px',
+//         duration: 1,
+//         // stagger: {
+//         //     amount: 1,
+//         //     from: 0,
+//         // }
+//     })
+//     console.log(tt);
+// })
 
 
-// // let slideContent = document.querySelectorAll(".sub-divs")
-// // let prev = document.querySelectorAll("#prev")
-// // let next = document.querySelectorAll("#next")
-// // let counter = document.querySelectorAll("#counter")
-// // let total = document.querySelectorAll("#total")
-// // let subCounter = document.querySelectorAll(".counter")
-// // let subTotal = document.querySelectorAll(".total")
+
+let slideContent = document.querySelectorAll(".sub-divs")
+let prev = document.querySelectorAll("#prev")
+let next = document.querySelectorAll("#next")
+let counter = document.querySelectorAll("#counter")
+let total = document.querySelectorAll("#total")
+let subCounter = document.querySelectorAll(".counter")
+let subTotal = document.querySelectorAll(".total")
 
 
 // // let navpop = document.querySelector(".menu")
@@ -117,34 +138,55 @@ let content = document.querySelectorAll('.slide1')
 
 
 
-// // for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 5; i++) {
 
-// //     total[i].innerHTML = "0" + slideContent[i].children.length
-// //     let x = 1
-// //     counter[i].innerHTML = "0" + x
-// //     subCounter[i].innerHTML = counter[i].innerHTML
-// //     subTotal[i].innerHTML = total[i].innerHTML
+    total[i].innerHTML = "0" + slideContent[i].children.length
+    let x = 1
+    counter[i].innerHTML = "0" + x
+    subCounter[i].innerHTML = counter[i].innerHTML
+    subTotal[i].innerHTML = total[i].innerHTML
 
-// //     next[i].addEventListener('click', ()=> {
+    next[i].addEventListener('click', () => {
+        if (slideContent[i].children.length > 3 || screenWidth <= 800) {
+
+            slideContent[i].appendChild(slideContent[i].children[0])
+            x = x + 1
+            if (x > slideContent[i].children.length) {
+                x = 1
+            }
+            counter[i].innerHTML = "0" + x
+            subCounter[i].innerHTML = counter[i].innerHTML
+            subTotal[i].innerHTML = total[i].innerHTML
+            gsap.from(slideContent[i].children, {
+                x: 500,
+                opacity: 0,
+                duration: 0.5
+            })
+        } else {
+            null
+        }
         
-// //         slideContent[i].appendChild(slideContent[i].children[0])
-// //         x = x + 1
-// //         if (x > slideContent[i].children.length) {
-// //             x = 1
-// //         }
-// //         counter[i].innerHTML = "0" + x
-// //         subCounter[i].innerHTML = counter[i].innerHTML
-// //         subTotal[i].innerHTML = total[i].innerHTML
-        
-// //     })
-// //     prev[i].addEventListener('click', () => {
-// //         slideContent[i].prepend(slideContent[i].children[slideContent[i].children.length - 1])
-// //         x = x - 1
-// //         if (x == 0) {
-// //             x = slideContent[i].children.length
-// //         }
-// //         counter[i].innerHTML = "0" + x
-// //         subCounter[i].innerHTML = counter[i].innerHTML
-// //         subTotal[i].innerHTML = total[i].innerHTML
-// //     }) 
-// // }
+    })
+    prev[i].addEventListener('click', () => {
+        if (slideContent[i].children.length > 3 || screenWidth <= 800) {
+            
+            slideContent[i].prepend(slideContent[i].children[slideContent[i].children.length - 1])
+            x = x - 1
+            if (x == 0) {
+                x = slideContent[i].children.length
+            }
+            counter[i].innerHTML = "0" + x
+            subCounter[i].innerHTML = counter[i].innerHTML
+            subTotal[i].innerHTML = total[i].innerHTML
+    
+            gsap.from(slideContent[i].children, {
+                x: -500,
+                opacity: 0,
+                duration: 0.5
+            })
+        } else {
+            null
+        }
+    }) 
+    
+}
