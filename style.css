@@ -203,9 +203,8 @@ h5 {
 
 }
 .second-section .sub-div p {
-    position: absolute;
-    top: 0%;
-    left: 85%;
+    align-self: flex-end;
+    margin: 0;
     font-size: 40px;
     color: #4D4D4D;
 }
@@ -240,12 +239,12 @@ h5 {
 
 
 /* Third section */
-.third-section { 
+.sec-obj  { 
     display: block;
     padding: 60px;
     margin-top: 50px;
 }
-.third-section .star {
+.sec-obj .star {
     width: 90px;
     margin: 15px 0;
     margin-left: -10px;
@@ -254,33 +253,33 @@ h5 {
     margin: 30px 0;
     border: 1px solid #424242;
 } */
-.third-section .text .txt {
+.sec-obj  .text .txt {
     margin-top: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.third-section .text .txt p {
+.sec-obj .text .txt p {
     width: 70%;
 }
-.third-section .thrdsec-btn:nth-child(1) {
+.sec-obj .thrdsec-btn:nth-child(1) {
     display: none;
 }
-.third-section .thrdsec-btn:nth-child(2) {
+.sec-obj .thrdsec-btn:nth-child(2) {
     display: block;
 }
 
-.third-section .sub-divs {
+.sec-obj  .sub-divs {
     display: flex;
     margin-top: 30px;
     justify-content: space-between;
     align-items: center;
 }
-.third-section .sub-divs h4 {
+.sec-obj .sub-divs h4 {
     font-size: 20px;
     line-height: 30px;
 }
-.third-section .sub-divs .content {
+.sec-obj .sub-divs .content {
     border: 1px solid var(--border-clr);
     display: block;
     width: 32%;
@@ -329,7 +328,7 @@ h5 {
     line-height: 20px;
     font-size: 20px;
 }
-.third-section .btn-bar {
+.sec-obj .btn-bar {
     border-top: 1px solid var(--border-clr);
     margin: 30px 0;
     padding: 10px 0;
@@ -338,12 +337,12 @@ h5 {
     align-items: center;
     flex-direction: row-reverse;
 }
-.third-section .btn-bar .navigator {
+.sec-obj .btn-bar .navigator {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.third-section .btn-bar .navigator button {
+.sec-obj .btn-bar .navigator button {
     height: 44px;
     width: 44px;
     padding: 10px;
@@ -359,15 +358,117 @@ h5 {
     }
 }
 
-.third-section .btn-bar .ps {
+.sec-obj .btn-bar .ps {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
     margin: 0 10px;
 }
-.third-section .btn-bar .res {
+.sec-obj .btn-bar .res {
     display: none;
+}
+
+/* Comment */
+.sec-obj .rating {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.comment .sub-divs {
+    padding: 40px;
+}
+.sec-obj .rating p {
+    /* margin-left: 10px; */
+    height: 38px;
+    width: 36px;
+    color: yellow;
+    border-radius: 100%;
+    padding: 8px;
+    background-color: var(--div-clr);
+    border: 1px solid var(--border-clr);
+    text-align: center;
+}
+
+/* COnclusion */ 
+.conclusion .text .txt {
+    align-items: normal;
+}
+.conclusion .text .txt p {
+    margin: 0;
+}
+.conclusion .text .txt button {
+    height: max-content;
+}
+
+/* Footer */
+footer .footer {
+    display: flex;
+    justify-content: space-between;
+}
+footer .footer .contact {
+    width: 20%;
+}
+footer .footer .contact input {
+    border: 1px solid var(--border-clr);
+    border-radius: 8px;
+    padding: 14px 20px;
+    background-color: var(--div-clr);
+    width: 100%;
+    margin: 10px 0;
+    outline: none;
+    color: #fff;
+}
+footer .footer .contact h5 {
+    justify-content: flex-start;
+    margin: 0;
+}
+footer .footer .info {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+footer .footer .info p {
+    line-height: 24px;
+    margin: 0;
+}
+footer .footer .info div .link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer .footer .info div .link a {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+footer .end-line {
+    padding: 12px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--div-clr);
+}
+footer .end-line .txt {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+footer .end-line a {
+    text-decoration: none;
+}
+footer .end-line div i {
+    /* height: 40px;
+    width: 40px; */
+    background-color: var(--bg-clr);
+    padding: 10px;
+    border-radius: 100%;
+    text-align: center;
+    gap: 10px;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -503,33 +604,41 @@ h5 {
     }
 
     /* THrid Section */
-    .third-section {
+    .sec-obj {
         padding: 20px 18px;
-    }
-    .third-section .text .txt p {
+    } 
+    .sec-obj .text .txt p {
         width: 100%;
     }
-    .third-section .thrdsec-btn:nth-child(2) {
+    .sec-obj .thrdsec-btn:nth-child(2) {
         display: none;
     }
-    .third-section .thrdsec-btn:nth-child(1) {
+    .sec-obj .thrdsec-btn:nth-child(1) {
         display: block;
     }
-    .third-section .sub-divs .content {
+    .sec-obj .sub-divs .content {
         width: 100%;
         display: none;
     }
-    .third-section .sub-divs .content:nth-child(1) {
+    .sec-obj .sub-divs .content:nth-child(1) {
         display: block;
     }
-    .third-section .btn-bar {
+    .sec-obj .btn-bar {
         flex-direction: row;
     }
-    .third-section .btn-bar .ps {
+    .sec-obj .btn-bar .ps {
         display: none;
     }
-    .third-section .btn-bar .res {
+    .sec-obj .btn-bar .res {
         display: flex;
+    }
+
+    .conclusion .text .txt {
+        flex-wrap: wrap;
+    }
+    .conclusion .text .txt button {
+        width: 100%;
+        margin: 20px 0;
     }
 }
 

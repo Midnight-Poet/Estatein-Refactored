@@ -45,14 +45,14 @@ gsap.from('.img1', {
     ease: 'power1.in'
 })
 
-gsap.from('.txt1', {
-    scrollTrigger: '.first-section',
-    x: 200,
-    opacity: 0,
-    duration: 2,
-    ease: 'elastic',
-    yoyo: true
-})
+// gsap.from('.txt1', {
+//     scrollTrigger: '.first-section',
+//     x: 200,
+//     opacity: 0,
+//     duration: 2,
+//     ease: 'elastic',
+//     yoyo: true
+// })
 gsap.from('.sdiv', {
     scrollTrigger: '.first-section',
     delay: 0.5,
@@ -82,29 +82,6 @@ gsap.from('.div-col-1', {
         from: 0,
     }
 })
-
-let content = document.querySelectorAll('.slide1')
-// let arr = []
-// let txt = document.querySelector('h1').innerText.split('')
-// for (let i = 0; i < txt.length; i++) {
-//     arr.push(txt[i])
-    
-// }
-// arr.forEach(element => {
-//     let tt = document.createElement('span')
-//     tt.innerText = element
-//     gsap.from(tt, {
-//         scrollTrigger: '.first-section',
-//         marginLeft: '-200px',
-//         duration: 1,
-//         // stagger: {
-//         //     amount: 1,
-//         //     from: 0,
-//         // }
-//     })
-//     console.log(tt);
-// })
-
 
 
 let slideContent = document.querySelectorAll(".sub-divs")
