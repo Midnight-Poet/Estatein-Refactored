@@ -199,17 +199,18 @@ for (let i = 0; i < star.length; i++) {
     opacity: 1,
     stagger: {
       amount: 0.6,
-	  each: 0.2,
+	    each: 0.2,
       from: 0
     }
   }).to(sub[i].children[3], {
-	scrollTrigger: sub[i].children[3],
-	opacity: 1,
-	y: 0
+    // scrollTrigger: sub[i].children[3],
+    duration: 0.4,
+    opacity: 1,
+    y: 0
   }).to(star[i].children, {
-	rotate: 360,
-	duration: 10,
-	repeat: -1
+    rotate: 360,
+    duration: 10,
+    repeat: -1
   })
 
  
@@ -269,7 +270,7 @@ for (let i = 0; i < 5; i++) {
   subTotal[i].innerHTML = total[i].innerHTML;
 
   next[i].addEventListener("click", () => {
-    if (slideContent[i].children.length > 3 || screenWidth <= 800) {
+    if (slideContent[i].children.length > 3 || window.screen.availWidth <= 800) {
       slideContent[i].appendChild(slideContent[i].children[0]);
       x = x + 1;
       if (x > slideContent[i].children.length) {
@@ -288,7 +289,7 @@ for (let i = 0; i < 5; i++) {
     }
   });
   prev[i].addEventListener("click", () => {
-    if (slideContent[i].children.length > 3 || screenWidth <= 800) {
+    if (slideContent[i].children.length > 3 || window.screen.availWidth <= 800) {
       slideContent[i].prepend(
         slideContent[i].children[slideContent[i].children.length - 1]
       );
