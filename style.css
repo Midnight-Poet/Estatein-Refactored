@@ -117,21 +117,26 @@ h5 {
     list-style: none;
     align-items: center;
 }
-.navbar ul li {
+.navbar ul a {
+    text-decoration: none;
     margin-left: 40px;
     padding: 12px 20px;
     border-radius: 5px;
     font-size: 14px;
     border: 1px solid;
     border-color: transparent;
+    &:first-child {
+        background-color: var(--bg-clr);
+        border-color: var(--border-clr);
+    }
 }
-.navbar ul li:hover {
+.navbar ul a:hover {
     background-color: var(--bg-clr);
     border-color: var(--border-clr);
     transition: .5s linear;
     cursor: pointer;
 }
-.navbar .close-btn, .navbar nav .contact-btn {
+.navbar .close-btn {
     display: none;
 }
 
@@ -566,6 +571,9 @@ footer .end-line div i {
         background-color: #fff;
         margin-top: 8px;
     }
+    .navbar .link {
+        display: none;
+    }
     .navbar .menu-btn div:nth-child(3) {
         width: 15px;
         align-self: self-end;
@@ -599,6 +607,7 @@ footer .end-line div i {
         top: 0;
         right: 0;
         width: 50%;
+        
     }
     .navbar nav .contact-btn {
         display: block;
@@ -613,11 +622,15 @@ footer .end-line div i {
         align-items: center;
         text-align: center;
     }
-    .navbar nav ul li {
+    .navbar nav ul a {
         margin: 0;
         margin-bottom: 15px;
         width: 99%;
         padding: 5%;
+    }
+    .navbar nav ul a:last-child:hover {
+        background-color: transparent;
+        border-color: transparent;
     }
     /* Second Section */
     .second-section {
