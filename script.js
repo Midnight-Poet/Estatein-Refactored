@@ -243,25 +243,6 @@ let total = document.querySelectorAll("#total");
 let subCounter = document.querySelectorAll(".counter");
 let subTotal = document.querySelectorAll(".total");
 
-// // let navpop = document.querySelector(".menu")
-// // let closeNav = document.querySelector(".close")
-// // let nav = document.querySelector(".nav")
-
-// // navpop.addEventListener('click', () => {
-// //     if (nav.className === "nav") {
-// //         nav.className += " navget"
-// //     } else {
-// //         nav.className = "nav"
-// //     }
-// // })
-// // closeNav.addEventListener('click', () => {
-// //     if (nav.className === "nav navget") {
-// //         nav.className = "nav"
-// //     } else {
-// //         nav.className ="nav navget"
-// //     }
-// // })
-
 for (let i = 0; i < 5; i++) {
   total[i].innerHTML = "0" + slideContent[i].children.length;
   let x = 1;
@@ -270,7 +251,7 @@ for (let i = 0; i < 5; i++) {
   subTotal[i].innerHTML = total[i].innerHTML;
 
   next[i].addEventListener("click", () => {
-    if (slideContent[i].children.length > 3 || window.screen.availWidth <= 800) {
+    if (slideContent[i].children.length > 3 || screenWidth <= 800) {
       slideContent[i].appendChild(slideContent[i].children[0]);
       x = x + 1;
       if (x > slideContent[i].children.length) {

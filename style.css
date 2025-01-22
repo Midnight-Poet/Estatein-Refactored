@@ -424,15 +424,14 @@ footer .footer {
     justify-content: space-between;
 }
 footer .footer .contact {
-    width: 20%;
+    width: 25%;
 }
 footer .footer .contact input {
-    border: 1px solid var(--border-clr);
-    border-radius: 8px;
-    padding: 14px 25px;
-    background-color: var(--div-clr);
+    /* height: 35px; */
+    font-size: 16px;
+    background: none;
+    border: none;
     width: 100%;
-    margin: 10px 0;
     outline: none;
     color: #fff;
 }
@@ -441,15 +440,20 @@ footer .footer .contact h5 {
     margin: 0;
 }
 footer .footer .contact .icons {
+    border: 1px solid var(--border-clr);
+    border-radius: 8px;
+    padding: 18px 25px;
+    background-color: var(--div-clr);
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
     position: relative;
-}
-footer .footer .contact .icons i{
-    position: absolute;
-    top: 38%;
-    left: 2%;
-}
-footer .footer .contact .icons i:nth-child(2) {
-    left: 90%;
+    & i {
+        color: #999999;
+    }
 }
 footer .footer .info {
     width: 60%;
