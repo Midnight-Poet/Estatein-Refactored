@@ -917,4 +917,17 @@ footer .end-line div i {
     footer .footer .info a {
         font-size: calc(14px - 10%)
     }
+    footer {
+        & .end-line {
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            & .txt {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 0;
+            }
+        }
+    }
 }

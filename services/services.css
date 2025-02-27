@@ -766,5 +766,18 @@ footer .end-line div i {
     footer .footer .res-info .right > div {
         padding: 15px 10px;
     }
+    footer {
+        & .end-line {
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            & .txt {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 0;
+            }
+        }
+    }
     
 }
