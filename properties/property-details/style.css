@@ -85,10 +85,46 @@ h4 {
     font-size: 24px;
     line-height: 36px;
 }
+
 h5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
     font-size: 20px;
-    line-height: 30px;
-    font-weight: 300;
+    line-height: 36px;
+    font-weight: 700;
+}
+
+.div {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: var(--bg-clr);
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    & img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+        animation: grow 1s infinite ease;
+        z-index: 9999;
+    }
+    
+}
+@keyframes grow {
+    0% {
+        scale: 1;
+    }
+    50% {
+        scale: 1.5;
+    }
+    100% {
+        scale: 1;
+    }    
 }
 section {
     padding: 60px;
@@ -131,12 +167,6 @@ section .star img:nth-child(3) {
     background-color: var(--div-clr);
     border: 1px solid var(--border-clr);
 }
-.navbar h5, 
-footer .contact h5 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
 .navbar .menu-btn {
     display: none;
 }
@@ -146,13 +176,13 @@ footer .contact h5 {
     align-items: center;
 }
 .navbar ul a {
+    text-decoration: none;
     margin-left: 40px;
     padding: 12px 20px;
     border-radius: 5px;
     font-size: 14px;
     border: 1px solid;
     border-color: transparent;
-    text-decoration: none;
     &:nth-child(3) {
         background-color: var(--bg-clr);
         border-color: var(--border-clr);
@@ -164,10 +194,15 @@ footer .contact h5 {
     transition: .5s linear;
     cursor: pointer;
 }
-.navbar .close-btn, .navbar nav .contact-btn {
+.navbar .close-btn {
     display: none;
 }
-
+.navbar h5, 
+footer .contact h5 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 /* Description */
 .description span {
     padding: 8px;
@@ -714,6 +749,9 @@ footer .end-line div i {
         background-color: #fff;
         margin-top: 8px;
     }
+    .navbar .link {
+        display: none;
+    }
     .navbar .menu-btn div:nth-child(3) {
         width: 15px;
         align-self: self-end;
@@ -747,6 +785,7 @@ footer .end-line div i {
         top: 0;
         right: 0;
         width: 50%;
+        
     }
     .navbar nav .contact-btn {
         display: block;
@@ -767,6 +806,10 @@ footer .end-line div i {
         width: 99%;
         padding: 5%;
     }
+    .navbar nav ul a:last-child:hover {
+        background-color: transparent;
+        border-color: transparent;
+    }
     section {
         padding: 20px 18px;
     }
@@ -780,6 +823,7 @@ footer .end-line div i {
     }
     .description .img {
         padding: 20px;
+        overflow: hidden;
         & > div:first-child {
             display: flex;
             align-items: center;
@@ -797,6 +841,7 @@ footer .end-line div i {
                 margin: 20px 0;
                 gap: 1.5%;
                 overflow-x: scroll;
+                overflow-y: hidden;
                 -ms-overflow-style: none;
                 scrollbar-width: none;
                 scroll-behavior: smooth;

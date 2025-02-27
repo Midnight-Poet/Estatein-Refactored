@@ -100,6 +100,36 @@ h6 {
     line-height: 24px;
     text-align: center;
 }
+.div {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: var(--bg-clr);
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    & img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+        animation: grow 1s infinite ease;
+        z-index: 9999;
+    }
+    
+}
+@keyframes grow {
+    0% {
+        scale: 1;
+    }
+    50% {
+        scale: 1.5;
+    }
+    100% {
+        scale: 1;
+    }    
+}
 .first-header {
     padding: 15px;
     text-align: center;
